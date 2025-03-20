@@ -1,0 +1,38 @@
+<!-- Sistemas de Información WEB - Tarea 02-Ej01Ejem03 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo 3: Texto con Fade & Move</title>
+  <style>
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;           /* Inicialmente invisible */
+        transform: translateY(20px);  /* Desplazado 20px hacia abajo */
+      }
+      100% {
+        opacity: 1;           /* Totalmente visible */
+        transform: translateY(0);     /* En su posición original */
+      }
+    }
+
+    .texto-animado {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      /* Aplicamos la animación */
+      animation: fadeUp 2s ease-out forwards;
+      /* "forwards" mantiene el estado final de la animación */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Texto con Efecto Fade In & Move Up</h1>
+  <p class="texto-animado">¡Hola! Aparezco gradualmente desde abajo.</p>
+
+  <footer>
+   <p>&copy; 2025 - Sistemas de Información WEB, Daniel Iturry</p>
+ </footer>
+</body>
+</html>

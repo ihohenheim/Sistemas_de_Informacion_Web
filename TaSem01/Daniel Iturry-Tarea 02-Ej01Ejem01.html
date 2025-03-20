@@ -1,0 +1,47 @@
+<!-- Sistemas de Información WEB - Tarea 02-Ej01Ejem01 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo 1: Botón con Pulso</title>
+  <style>
+    /* Definimos una animación "pulso" */
+    @keyframes pulso {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2); /* Crece un 20% */
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Estilos para el botón */
+    .btn-pulse {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      /* Aplicamos la animación "pulse" */
+      animation: pulse 1.5s infinite;
+    }
+    .btn-pulse:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Botón con Efecto Pulso</h1>
+  <button class="btn-pulse">Pulsar</button>
+
+  <footer>
+    <p>&copy; 2025 - Sistemas de Información WEB, Daniel Iturry</p>
+  </footer>
+</body>
+</html>
