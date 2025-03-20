@@ -1,0 +1,16 @@
+/* 
+  Archivo externo: estilo.css
+  Definimos aquí el color de fondo del body 
+  (sobreescribiendo cualquier color previo si existiera).
+*/
+body {
+  background-color: #eee; /* Fondo gris claro */
+  /* Si quisieras, podrías poner una imagen de fondo:
+     background-image: url('fondo.png');
+     background-size: cover; 
+     background-repeat: no-repeat;
+  */
+}
+
+/* Puedes aprovechar y poner más reglas 
+   si quieres separar tu CSS de la plantilla principal. */

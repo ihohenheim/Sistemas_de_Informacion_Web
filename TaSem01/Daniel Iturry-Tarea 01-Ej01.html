@@ -1,0 +1,489 @@
+<!-- Sistemas de Información WEB - Tarea 01-Ej02 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> 
+  <title>Tarea 01: HTML y CSS</title>
+
+  <!-- 
+    1) Carga opcional de la fuente Poppins desde Google Fonts 
+       para un aspecto moderno de la tipografía 
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+  <!-- 
+    2) Aca aplocamos el estilo externo solicitado en el item 10!
+-->
+       <link rel="stylesheet" href="estilo.css">
+       
+  <style>
+    /*
+      =================== ESTILOS INTERNOS ===================
+      Definimos la rotación de colores en 3 clases:
+      seccion1, seccion2, seccion3, y aplicamos cada una
+      a las secciones del 1 al 10 en forma cíclica.
+    */
+
+    /* ====== Fuente base para todo el body ====== */
+    body {
+      font-family: 'Poppins', sans-serif; /* Fuente moderna */
+      margin: 0; /* Removemos el margen por defecto del navegador */
+      padding: 0;
+    }
+
+    /* ----- Cabecera principal del documento ----- */
+    header {
+      background-color: #fafafa;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    header h1 {
+      margin: 0;
+    }
+    /* Menú de navegación */
+    nav ul {
+      list-style: none;
+      margin: 5px 0 0 0;
+      padding: 0;
+      display: flex;
+      gap: 10px;
+    }
+    nav li a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    /*
+      ====== Clases de Sección: seccion1, seccion2, seccion3 ======
+      Cada una define colores de fondo y encabezado distintos.
+      Se usarán cíclicamente en las secciones 1..10.
+    */
+
+    /* ----- seccion1 (fondo rosa claro) ----- */
+    .seccion1 {
+      background-color: #f9d1d1;
+      font-size: 8px;
+      margin: 8px;
+      padding: 2px;
+    }
+    .seccion1 header {
+      background-color: #f7b2b2;
+      padding: 4px;
+      margin-bottom: 10px;
+    }
+    .seccion1 footer {
+      background-color: #f7b2b2;
+      border: 2px solid #f5a7a7; 
+      border-radius: 12px; 
+      padding: 4px;         
+      margin: 2px;          
+      display: inline-block; 
+    }
+
+    /* ----- seccion2 (fondo verde claro) ----- */
+    .seccion2 {
+      background-color: #d6f9d1;
+      font-size: 8px;
+      margin: 8px;
+      padding: 2px;
+    }
+    .seccion2 header {
+      background-color: #b2f7b2;
+      padding: 4px;
+      margin-bottom: 10px;
+    }
+    .seccion2 footer {
+      background-color: #b2f7b2;
+      border: 2px solid #a1ea9c;
+      border-radius: 10px;
+      padding: 4px;
+      margin: 0px;
+      display: inline-block;
+    }
+
+    /* ----- seccion3 (fondo azul claro) ----- */
+    .seccion3 {
+      background-color: #d1e2f9;
+      font-size: 8px;
+      margin: 8px;
+      padding: 2px;
+    }
+    .seccion3 header {
+      background-color: #b2cdf7;
+      padding: 4px;
+      margin-bottom: 10px;
+    }
+    .seccion3 footer {
+      background-color: #b2cdf7;
+      border: 2px solid #a2bbeb;
+      border-radius: 8px;
+      padding: 4px;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    /*
+      ===== LISTA PERSONALIZADA EN SECCIÓN 2 =====
+      Para cambiar color de viñetas, fuente y bordes
+      de cada <li>.
+    */
+    .lista-personalizada {
+      list-style-type: disc;
+      font-family: "Courier New", Courier, monospace; /* Fuente distinta */
+      margin: 5px 0;
+      padding-left: 20px;
+    }
+    /* Cambiamos color de la viñeta con ::marker */
+    .lista-personalizada li::marker {
+      color: #0059ff; /* Viñetas azules */
+    }
+    /* Borde distinto para cada item (hasta 5 items) */
+    .lista-personalizada li {
+      margin: 4px 0;
+      padding: 1px;
+    }
+    .lista-personalizada li:nth-child(1) {
+      border: 1px dashed #ff00ff;
+    }
+    .lista-personalizada li:nth-child(2) {
+      border: 1px dotted #00aa00;
+    }
+    .lista-personalizada li:nth-child(3) {
+      border: 2px double #0000ff;
+    }
+    .lista-personalizada li:nth-child(4) {
+      border: 1px solid #ffa500;
+    }
+    .lista-personalizada li:nth-child(5) {
+      border: 2px groove #800080;
+    }
+
+    /*
+      ===== Estilos para las tablas en seccion3 =====
+      (aplicados también a la tabla del Ejercicio 6 si la
+       colocamos en seccion3)
+    */
+    .seccion3 table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 1px auto;
+      background-color: #fff;
+    }
+    .seccion3 th,
+    .seccion3 td {
+      border: 2px solid #333;
+      padding: 5px;
+      text-align: left;
+    }
+    .seccion3 tr:nth-child(even) {
+      background-color: #eef;
+    }
+    .seccion3 thead {
+      background-color: #ccd;
+    }
+
+    /* Pie de página global del documento */
+    footer {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    ENCABEZADO PRINCIPAL con Título y Navegación 
+    (fuera de las secciones de colores).
+  -->
+  <header>
+    <h1>Tarea 01: HTML y CSS - Sistemas WEB</h1>
+    <nav>
+      <ul>
+        <li><a href="#ej1">Ejercicio 1</a></li>
+        <li><a href="#ej2">Ejercicio 2</a></li>
+        <li><a href="#ej3">Ejercicio 3</a></li>
+        <li><a href="#ej4">Ejercicio 4</a></li>
+        <li><a href="#ej5">Ejercicio 5</a></li>
+        <li><a href="#ej6">Ejercicio 6</a></li>
+        <li><a href="#ej7">Ejercicio 7</a></li>
+        <li><a href="#ej8">Ejercicio 8</a></li>
+        <li><a href="#ej9">Ejercicio 9</a></li>
+        <li><a href="#ej10">Ejercicio 10</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal de la página -->
+  <main>
+    <!-- 
+      SECCIÓN 1 -> seccion1 (Primer color: rosa claro)
+    -->
+    <section id="ej1" class="seccion1">
+      <header>
+        <h2>Ejercicio 01: Estructura de un documento HTML</h2>
+      </header>
+      <article>
+        <p>Este es mi primer Hola Mundo en HTML para desarrollo de sistemas WEB.</p>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 1</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 2 -> seccion2 (Segundo color: verde claro)
+      Aquí aplicamos la .lista-personalizada a las listas 
+      (ingredientes y pasos).
+    -->
+    <section id="ej2" class="seccion2">
+      <header>
+        <h2>Ejercicio 02: Listas ordenadas y desordenadas</h2>
+      </header>
+      <article>
+        <h3>Ingrediente de pan de masa Madre</h3>
+        <!-- Lista DESORDENADA con estilo personalizado -->
+        <ul class="lista-personalizada">
+          <li>330 g de agua</li>
+          <li>400 g harina de fuerza</li>
+          <li>100 g harina integral fina</li>
+          <li>120 g masa madre bien activa</li>
+          <li>11 g de sal (una cucharada)</li>
+        </ul>
+
+        <h3>Pasos para la preparación del pan casero</h3>
+        <h4>Para la Masa:</h4>
+        <!-- Lista ORDENADA con estilo personalizado -->
+        <ol class="lista-personalizada">
+          <li>Es importante una temperatura ambiente entre 24° y 26°...</li>
+          <li>Cubrir la mezcla y dejar reposar por 1 hora aproximadamente.</li>
+          <li>Después del tiempo de reposo, estirar un poco la masa...</li>
+          <li>Agregar la masa madre bien activa...</li>
+          <li>Cubrir y dejar reposar por 30 minutos.</li>
+        </ol>
+
+        <h4>Para las series de pliegues:</h4>
+        <ol class="lista-personalizada">
+          <li>Estirar y doblar la masa 4 veces (esto es 1 serie).</li>
+          <li>Cubrir y dejar reposar por 30 minutos.</li>
+          <li>Hacer 4 series de pliegues...</li>
+        </ol>
+
+        <h4>Para el preformado:</h4>
+        <ol class="lista-personalizada">
+          <li>Con la masa en un mesón, toma los extremos, llévalos al centro...</li>
+        </ol>
+
+        <h4>Para el formado:</h4>
+        <ol class="lista-personalizada">
+          <li>Toma los extremos de la masa y llévalos al centro...</li>
+          <li>Voltear la masa y ponerla en un banneton...</li>
+          <li>Cubrir y dejar reposar 1 hora a temperatura ambiente...</li>
+          <li>Greñar (realizar un corte profundo)...</li>
+          <li>Hornear 20 minutos con la tapa puesta...</li>
+          <li>Dejar enfriar mínimo 30 minutos antes de cortar.</li>
+        </ol>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 2</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 3 -> seccion3 (Tercer color: azul claro)
+      Con estilo en línea color: red para forzar texto rojo
+    -->
+    <section id="ej3" class="seccion3" style="color: red;">
+      <header>
+        <h2>Ejercicio 03: Insertar enlaces e imágenes</h2>
+      </header>
+      <article>
+        <p>Para que puedan tener referencia de la fuente:</p>
+        <a href="https://www.gourmet.cl/recetas/pan-de-masa-madre/" target="_blank">
+          gourmet.cl
+        </a>
+        <p><br></p>
+        <img 
+          src="/001.jpg" 
+          alt="Pan de masa madre" 
+          width="200" 
+          height="150"
+          style="border:1px solid #000;"
+        >
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 3 (texto en rojo por estilo inline)</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 4 -> seccion1 (Rosa claro, reinicio de ciclo)
+    -->
+    <section id="ej4" class="seccion1">
+      <header>
+        <h2>Ejercicio 04: Formulario</h2>
+      </header>
+      <article>
+        <p>Para este apartado vamos a crear un formulario si deseas que te envíe por correo más recetas:</p>
+        <form action="/datos.txt" method="post">
+          <label for="nombre">Nombre:</label>
+          <input 
+            type="text" 
+            id="nombre" 
+            name="nombre" 
+            placeholder="Ingresa tu nombre"
+          >
+          
+          <br><br>
+
+          <label for="correo">Correo electrónico:</label>
+          <input 
+            type="email" 
+            id="correo" 
+            name="correo" 
+            placeholder="Ingresa tu correo"
+          >
+          
+          <br><br>
+          <button type="submit">Enviar!</button>
+        </form>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 4</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 5 -> seccion2 (Verde claro)
+    -->
+    <section id="ej5" class="seccion2">
+      <header>
+        <h2>Ejercicio 05: Semánticas como Header, footer, section y article</h2>
+      </header>
+      <article>
+        <p>En este caso la estructura completa de la página cumple con lo pedido, por lo que no se separa una sección aparte para este apartado.</p>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 5</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 6 -> seccion3 (Azul claro)
+    -->
+    <section id="ej6" class="seccion3">
+      <header>
+        <h2>Ejercicio 06: Manejo de Tablas en HTML</h2>
+      </header>
+      <article>
+        <table border="1">
+          <caption>Tips para la preparación de Masa Madre</caption>
+          <thead>
+            <tr>
+              <th>Ingredientes</th>
+              <th>Generar el cultivo</th>
+              <th>Mantenimiento del Cultivo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Harina de fuerza o harina integral</td>
+              <td>Mezcla la harina integral o de fuerza en partes iguales con el agua fermentada</td>
+              <td>Cada 24h se debe desechar o guardar el exceso no usado de la masa madre quedando solo un 20%</td>
+            </tr>
+            <tr>
+              <td>Agua fermentada de fruta de dos o 3 días</td>
+              <td>Desecha cada 12h a 24h el 80% del cultivo y alimenta con el agua fermentada y la harina integral...</td>
+              <td>Mezclar partes iguales harina y agua mineral hasta obtener la masa espesa</td>
+            </tr>
+            <tr>
+              <td>Agua mineral NO DE LA CANILLA!!</td>
+              <td>Al 4to día si hay muchas burbujas y sonido dentro de la masa, solo mantenla por 3 días más...</td>
+              <td>Mantener en un sitio aislado del sol a una temperatura media de 27º a 30º</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">
+                Los recipientes de cultivo deben de ser preferentemente de vidrio y mantenerse cerrados.  
+                La harina de mantenimiento basta que sea solo de fuerza NO LEUDANTE.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 6</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 7 -> seccion1 (Rosa claro)
+    -->
+    <section id="ej7" class="seccion1">
+      <header>
+        <h2>Ejercicio 07: Aplicando estilos y clases</h2>
+      </header>
+      <article>
+        <p>En este caso aplicamos los estilos y clases a las secciones de la presente página para una composición más compleja. Generamos una planilla de prueba y luego la aplicamos al presente documento.</p>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 7</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 8 -> seccion2 (Verde claro)
+    -->
+    <section id="ej8" class="seccion2">
+      <header>
+        <h2>Ejercicio 08: CSS en listas, márgenes, íconos y texto</h2>
+      </header>
+      <article>
+        <p>Esta sección hace referencia a la aplicación de estilos en las listas. Se puede observar en esta Sección 2 el uso de la clase <strong>.lista-personalizada</strong> para las listas ordenadas y desordenadas.</p>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 8</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 9 -> seccion3 (Azul claro)
+    -->
+    <section id="ej9" class="seccion3">
+      <header>
+        <h2>Ejercicio 09: Tabla para mostrar datos</h2>
+      </header>
+      <article>
+        <p>En la tabla de la Sección 6 se aplican los conceptos pedidos en este ejercicio.</p>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 9</p>
+      </footer>
+    </section>
+
+    <!-- 
+      SECCIÓN 10 -> seccion1 (Rosa claro), 
+      con estilo inline color:red
+    -->
+    <section id="ej10" class="seccion1" style="color: red;">
+      <header>
+        <h2>Ejercicio 10: Aplicar estilos CSS inline y en archivo externo</h2>
+      </header>
+      <article>
+        <p>Los conceptos aplicados se verán reflejados en la Sección 3, donde citamos el hipervínculo con la imagen, y aquí, donde forzamos el texto a rojo mediante un estilo inline.</p>
+      </article>
+      <footer>
+        <p>Pie de página de la Sección 10 (texto en rojo por estilo inline)</p>
+      </footer>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA GLOBAL DEL DOCUMENTO -->
+  <footer>
+    <p>&copy; 2025 - Sistemas de Información WEB, Daniel Iturry</p>
+  </footer>
+</body>
+</html>
