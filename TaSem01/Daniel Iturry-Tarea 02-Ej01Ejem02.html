@@ -1,0 +1,38 @@
+<!-- Sistemas de Información WEB - Tarea 02-Ej01Ejem02 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo 2: Loader Giratorio</title>
+  <style>
+    /* Definimos la animación para girar (spin) */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 8px solid #f3f3f3; /* Borde gris claro */
+      border-top: 8px solid #3498db; /* Borde superior de otro color */
+      border-radius: 50%;           /* Forma de círculo */
+      animation: spin 1s linear infinite;
+      margin: 50px auto;           /* Centra el elemento horizontalmente */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Loader Giratorio</h1>
+  <div class="loader"></div>
+ 
+  <footer>
+   <p>&copy; 2025 - Sistemas de Información WEB, Daniel Iturry</p>
+ </footer>
+</body>
+</html>

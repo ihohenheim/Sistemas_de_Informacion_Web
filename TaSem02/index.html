@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistemas de Información WEB - SEM02 Eercitario 03</title>
+  <!-- Enlazamos el archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Encabezado (Header) con imagen de Banner -->
+  <header>
+   <img
+   src="https://www.pol.una.py/wp-content/uploads/2019/07/fpuna_logo_corporativo.svg" 
+   alt="Banner de la página"
+   style="max-width: 100%; height: auto; display: block; margin: 0 auto;"
+   />
+    <h1>Maestrica en Ingeniería Electronica</h1>
+  </header>
+
+  <!-- Datos iniciales de Información -->
+  <section>
+    <h2>Datos de la materia</h2>
+    <p>
+      <ul>
+      <li><b>Materia:</b> [IF4] Sistemas de Información WEB</nl>
+      <li><b>Alumno:</b> Ing. Daniel Iturry</li>
+      <li><b>Ejercitario 03 - SEM 02</b></li>
+   </ul>
+
+    </p>
+  </section>
+
+  <!-- Cuerpo (Contenido principal) -->
+  <main>
+    <h2>Ejercicio 01</h2>
+    <p>
+      Profavor ingrese el monto que desea convertir y su divisa actualizada!
+      <br>
+      <button onclick="ejercicio01()">Ejercicio 01</button>
+    </p>
+    
+    <h2>Ejercicio 02</h2>
+    <p>
+      Conversos re temperatura Celcius a Fahrenheit:
+      <br>
+      <button onclick="ejercicio02()">Ejercicio 02 (C a F)</button>
+    </p>
+
+    <h2>Ejercicio 03</h2>
+    <p>
+    <p>Conversión de Fahrenheit a Celsius directamente en la página:</p>
+
+      <!-- Contenedor de Ejercicio 03 -->
+   <div id="ejercicio03">
+      <label for="fahrenheitInput">Fahrenheit:</label>
+      <input 
+         type="number" 
+         id="fahrenheitInput" 
+         oninput="convertirFahrenheitACelsius()"
+         placeholder="°F"
+      >
+      <span id="resultadoCelsius"></span>
+   </div>
+   <br>
+   Aca probamos hacer la convercion directamente en la pagina en tiempo que se ingresa el valor.
+    </p>
+
+    <h2>Ejercicio 04</h2>
+    <p>
+      Ingreos de datos de usuario:
+      Nombre, Apellido y Edad, y de salida se optenga un mensaje con los datos concatenados
+      Esos datos deberan de preseder un saludo amigable!
+      <br>
+      <button onclick="ejercicio04()">Ejercicio 04</button>
+
+
+    </p>
+
+    <h2>Ejercicio 05</h2>
+    <p>
+      Ingresar la edad actual del usuario, y debera de calcular si el usuario esta entre los:
+      5, 10  o  100 años.
+
+    <div id="ejercicio05">
+    <label for="edadInput">Tu edad actual:</label>
+      <input 
+      type="number" 
+      id="edadInput" 
+      placeholder="Edad en años" 
+      oninput="calcularEdades()"
+    >
+  <br><br>
+  
+  <!-- Tabla para mostrar resultados en 3 columnas -->
+  <table border="1" cellspacing="0" cellpadding="5">
+    <thead>
+      <tr>
+        <th>En 5 años tendrás:</th>
+        <th>En 10 años tendrás:</th>
+        <th>En 100 años tendrás:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- Celdas donde se mostrará el resultado -->
+        <td id="edad5"></td>
+        <td id="edad10"></td>
+        <td id="edad100"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </p>
+
+    <h2>Ejercicio 06</h2>
+    <p>
+      Ingresar por el usuario un monto de un producto, el cual imprimira el valor del producto mas el 
+      IVA
+    </p>
+    <div id="ejercicio06" style="text-align: center;">
+      <label for="montoGsInput">Monto GS:</label>
+      <input 
+        type="number" 
+        id="montoGsInput" 
+        placeholder="Ej: 100000"
+        oninput="calcularMontoConIva()"
+      >
+    
+      <div id="resultadoConIva" style="text-align: center; margin-top: 20px;"></div>
+    </div>
+
+    <h2>Ejercicio 07</h2>
+    <p>
+      Si el usuario ingresa un monto de dinero que represente el costo de un producto, este debera de imprimir el 
+      valor del mismo sin IVA y el valor del IVA en un mensaje! 
+    </p>
+
+    <div id="ejercicio07" style="text-align: center;">
+      <label for="montoGs">Monto GS:</label>
+      <input 
+        type="number" 
+        id="montoGs" 
+        placeholder="Ej: 100000"
+        oninput="calcularIva()"
+      >
+      
+      <div id="resultadoIva" style="text-align: center; margin-top: 20px;"></div>
+    </div> 
+
+    <h2>Ejercicio 08</h2>
+    <p>
+      Se debera de ingresar el gasto total de la cuenta de un restaurante, y posterior ingresar en valor porcentual
+      imprimira el valor de la propina
+    </p>
+    <p>Ingresa el valor total del consumo en GS y el porcentaje de propina para calcular el valor de la propina:</p>
+
+<div id="ejercicio08" style="text-align: center;">
+  <label for="consumoTotal">Consumo GS:</label>
+  <input 
+    type="number" 
+    id="consumoTotal" 
+    placeholder="Ej: 150000" 
+    oninput="calcularPropina()"
+  >
+  <br><br>
+  <label for="porcentajePropina">% Propina:</label>
+  <input 
+    type="number" 
+    id="porcentajePropina" 
+    placeholder="Ej: 15" 
+    oninput="calcularPropina()"
+  >
+  <br><br>
+  <div id="resultadoPropina" style="margin-top: 20px;"></div>
+</div>
+
+
+    <h2>Ejercicio 09</h2>
+    <p>
+      El usuario debera de ingresar un año, y el mismo debera de imprimir un mensaje si el año es bisiesto, y debera de 
+      emitir un mensaje.
+    </p>
+    <p>Ingresa un año y verifica si es bisiesto:</p>
+
+<div id="ejercicio09" style="text-align: center;">
+  <label for="inputAnio">Año:</label>
+  <input 
+    type="number" 
+    id="inputAnio" 
+    placeholder="Ej: 2024"
+    oninput="verificarBisiesto()"
+  >
+  <br><br>
+  <div 
+    id="mensajeBisiesto" 
+    style="border: 2px solid rgb(163, 3, 3); background-color: white; color: #2275a5; padding: 10px; display: inline-block;">
+  </div>
+</div>
+
+    <h2>Ejercicio 10</h2>
+    <p>
+      Selecciona dos fechas (formato DD/MM/YYYY) para calcular la diferencia entre ellas: 
+   </p>
+    
+
+<div id="ejercicio10" style="text-align: center;">
+  <label for="fechaInicio">Fecha de Inicio:</label>
+  <input type="date" id="fechaInicio">
+  <br><br>
+  <label for="fechaFin">Fecha Final:</label>
+  <input type="date" id="fechaFin">
+  <br><br>
+  <button onclick="calcularDiferenciaFechas()">Calcular Diferencia</button>
+</div>
+
+
+
+  </main>
+<footer style="text-align: center; padding: 20px; background-color: #f0f0f0; margin-top: 30px;">
+   &copy; 2025 Copyright. Ing. Daniel Iturry A.<br>Facultad Politécnica
+ </footer>
+
+  <!-- Enlazamos el archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
